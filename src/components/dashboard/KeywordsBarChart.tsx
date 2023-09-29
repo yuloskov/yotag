@@ -74,9 +74,8 @@ export const KeywordsBarChart = () => {
         />
         <Bar
           dataKey="total"
-          fill="#adfa1d"
+          fill="#f87315"
           radius={[4, 4, 0, 0]}
-          label={{ value: "keyword", angle: -90, position: "inside" }}
         />
       </BarChart>
     </ResponsiveContainer>

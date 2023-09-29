@@ -32,6 +32,21 @@ export const posts: PostData[] = [
     cover:
       "https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80",
   },
+  {
+    title: "The Best of Mozart",
+    cover:
+      "https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80",
+  },
+  {
+    title: "The Best of Mozart",
+    cover:
+      "https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80",
+  },
+  {
+    title: "The Best of Mozart",
+    cover:
+      "https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80",
+  },
 ];
 
 export default function Home() {
@@ -39,16 +54,16 @@ export default function Home() {
 
   return (
     <MainLayout title="Home">
-      <div className="flex flex-col gap-4">
+      <div className="flex w-full flex-col gap-4">
         <div className="flex gap-4">
-          <Card className="w-2/3 px-5 py-4">
+          <Card className="px-5 py-4 flex-grow">
             <CardHeader className="space-y-1">
               <CardTitle className="text-2xl">Most popular tags</CardTitle>
             </CardHeader>
             <KeywordsBarChart />
           </Card>
 
-          <Card className="px-5 py-4">
+          <Card className="px-5 py-4 flex-shrink-0 w-[400px]">
             <CardHeader className="space-y-1">
               <CardTitle className="text-2xl">Content type</CardTitle>
               <ContentTypeChart />
@@ -56,7 +71,7 @@ export default function Home() {
           </Card>
         </div>
 
-        <Card className="px-5 py-4">
+        <Card className="w-full px-5 py-4">
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl">Most popular posts</CardTitle>
           </CardHeader>

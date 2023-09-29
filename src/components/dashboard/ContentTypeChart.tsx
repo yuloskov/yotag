@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie, Cell, Legend } from "recharts";
+import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
 
 const data = [
   { name: "Stories", value: 400 },
@@ -12,7 +12,7 @@ const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 const ContentTypeChart = () => {
   return (
-    <PieChart width={400} height={400}>
+    <PieChart width={300} height={350}>
       <Pie
         data={data}
         cx="50%"

@@ -1,5 +1,6 @@
 import { TagsTable } from "~/components/search/Data/TagsTable";
 import { SelectorFilter } from "~/components/search/filters/SelectorFilter";
+import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import { MainLayout } from "~/layouts/MainLayout";
 
@@ -11,7 +12,7 @@ const filtersConfig = [
   },
   {
     label: "Age",
-    placeholder: "Select age",
+    placeholder: "Select  age",
     options: ["0-17", "18-34", "35-51", "52-70", "71+"],
   },
   {
@@ -23,6 +24,17 @@ const filtersConfig = [
     label: "Content type",
     placeholder: "Select content type",
     options: ["Photo", "Video", "Carousel", "Story", "Reels"],
+  },
+  {
+    label: "Period",
+    placeholder: "Select period",
+    options: [
+      "Last 3 days",
+      "Last 7 days",
+      "Last 14 days",
+      "Last 30 days",
+      "Last 90 days",
+    ],
   },
 ];
 
@@ -98,12 +110,17 @@ const tagsData = [
 export default function Search() {
   return (
     <MainLayout title="Search">
-      <div className="flex flex-row items-center gap-4">
-        <Input placeholder="Enter hashtag" className="max-w-[300px]" />
-        {filtersConfig.map((filter) => (
-          <SelectorFilter {...filter} key={filter.label} />
-        ))}
-      </div>
+      <Card>
+        <CardHeader className="space-y-1">
+          <CardTitle className="text-2xl">Filters</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-row flex-wrap items-center justify-stretch gap-4">
+          <Input placeholder="Enter hashtag" className="max-w-[300px]" />
+          {filtersConfig.map((filter) => (
+            <SelectorFilter {...filter} key={filter.label} />
+          ))}
+        </CardContent>
+      </Card>
 
       <div className="mt-5">
         <TagsTable items={tagsData} />

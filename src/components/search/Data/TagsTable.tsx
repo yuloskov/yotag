@@ -18,7 +18,7 @@ export const TagsTable: FC<TagsTableProps> = ({ items }) => {
   return (
     <Card className="flex flex-col gap-4 px-4 py-3">
       <div className="grid grid-cols-4 w-full border-b border-primary py-2">
-        <p>Hash Tag</p>
+        <p>Tag</p>
         <p>Mentions</p>
         <p>Is Trending</p>
         <p>Open Report</p>

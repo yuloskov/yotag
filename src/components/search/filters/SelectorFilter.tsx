@@ -28,7 +28,7 @@ export const SelectorFilter: FC<SelectorFilterProps> = ({
 }) => {
   return (
     <Select onValueChange={onChange} defaultValue={selected}>
-      <SelectTrigger className="w-full">
+      <SelectTrigger className="w-full max-w-[300px]">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>
